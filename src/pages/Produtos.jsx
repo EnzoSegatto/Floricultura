@@ -1,10 +1,13 @@
 import Menu from "./Menu.JSX"
+import Footer from "../inter/Footer"
+import BasicExample from "../inter/product"
 
 function Produtos(){
  return(
     <div>
-    <h1>Produtos</h1>
-    <Menu/>
+      <Menu/>
+      <BasicExample/><BasicExample/>
+      <Footer/>
     </div>
  )
 }

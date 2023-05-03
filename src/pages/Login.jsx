@@ -1,10 +1,11 @@
 import Menu from "./Menu.JSX"
+import Footer from "../inter/Footer"
 
 function Login(){
  return(
     <div>
-    <h1>Login</h1>
     <Menu/>
+    <Footer/>
     </div>
  )
 }
