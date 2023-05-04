@@ -1,20 +1,30 @@
-import Button from 'react-bootstrap/Button';
+
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import '../css/main.css'
+
 
 function BasicExample() {
-
   const Prod1 = 'https://cdn.discordapp.com/attachments/826586755229810688/1103321493447909476/Design_sem_nome__2_-removebg-preview.png'
   return (
-    <Card style={{ width: '20rem' }}>
-      <Card.Img variant="top" src= {Prod1} />
-      <Card.Body>
-        <Card.Title>Rosa Linda</Card.Title>
-        <Card.Text>
-          Essa rosa foi feita e escolhida a dedo para você. Colhida no norte na Ásia.
-        </Card.Text>
-        <Button variant="primary">Fale com especialistas</Button>
-      </Card.Body>
-    </Card>
+    <Row xs={1} md={2} className="g-4">
+      {Array.from({ length: 2 }).map((_, idx) => (
+        <Col key={idx}>
+          <Card>
+            <Card.Img width={200} height={400}variant="top" src={Prod1} />
+            <Card.Body>
+              <Card.Title>Flores</Card.Title>
+              <Card.Text>
+                Essa é uma flor especial da patagonia e sua mãe vai adorar -''-
+              </Card.Text>
+            </Card.Body>
+            <Button variant="primary">Fale com especialista!</Button>{' '}
+          </Card>
+        </Col>
+      ))}
+    </Row>
   );
 }
 

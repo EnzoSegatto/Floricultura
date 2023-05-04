@@ -1,12 +1,16 @@
 import Menu from "./Menu.JSX"
 import Footer from "../inter/Footer"
 import BasicExample from "../inter/product"
+import "../css/main.css"
 
 function Produtos(){
  return(
     <div>
       <Menu/>
-      <BasicExample/><BasicExample/>
+      <div className="produtohome"><h1>Produtos</h1></div>dev
+      <div className="produtos">
+        <BasicExample/><BasicExample/>
+      </div>
       <Footer/>
     </div>
  )
